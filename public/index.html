@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+  <title>Sing-Up Form</title>
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="formWrapper">
+        <form action="index.html" method="post" id="singForm" class="form" novalidate>
+          <h2>Sing up</h2>
+          <fieldset form="singForm" class="form__fieldset">
+            <legend>
+                Please fill in this form
+            </legend>
+
+            <div class="doubleInput">
+              <div class="form__inputWrapp">
+                <label for="firstName">First name<span class="req">*</span></label>
+                <input type="text" data-validation="firstName" id="firstName" name="firstName" required autocomplete="off">
+                <!-- <div class="tooltip"></div> -->
+              </div>
+              <div class="form__inputWrapp">
+                <label for="lastName">Last name<span class="req">*</span></label>
+                <input type="text" data-validation="lastName" id="lastName" name="lastname" required autocomplete="off">
+              </div>
+            </div>
+
+            <div class="form__inputWrapp">
+              <label for="email">Email<span class="req">*</span></label>
+              <input type="email" data-validation="email" name="email" id="email" required autocomplete="off">
+            </div>
+
+            <div class="form__inputWrapp">
+              <label for="password">Password<span class="req">*</span></label>
+              <input type="password" data-validation="password" name="password" id="password" required autocomplete="off">
+            </div>
+
+            <div class="doubleInput">
+            <div class="form__inputWrapp bday">
+              <label for="birthday">Birthday<span class="req">*</span></label>
+              <input type="date" data-validation="birthday" name="birthday" id="birthday" required autocomplete="off">
+            </div>
+
+            <fieldset form="singForm" class="gender">
+              <legend>Gender<span class="req">*</span></legend>
+              <div class="gender__item">
+                <label for="male">Male</label>
+                <input type="radio" data-validation="gender" value="male" id="male" name="gender" required autocomplete="off">
+              </div>
+              <div class="gender__item">
+                <label for="female">Female</label>
+                <input type="radio" data-validation="gender" value="female" id="female" name="gender" required autocomplete="off">
+              </div>
+            </fieldset>
+            </div>
+            <div class="form__inputWrapp">
+              <label for="country">Country<span class="req">*</span></label>
+              <select data-validation="country" name="content" id="country" required autocomplete="off">
+                <option disabled selected></option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="USA">USA</option>
+                <option value="Russia">Russia</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form__inputWrapp">
+              <label for="address">Address<span class="req">*</span></label>
+              <input type="text" data-validation="address" name="address" id="address" required autocomplete="off">
+            </div>
+
+            <div class="notes">
+              <label for="notes">Notes</label>
+              <textarea id="notes" name="notes" autocomplete="off" cols="34"></textarea>
+            </div>
+
+            <button type="submit" id="btn" class="btn">Sing up</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

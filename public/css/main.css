@@ -1,0 +1,241 @@
+/*  Specification  */
+body {
+  background:#c1bdba;
+  font-family: 'Titillium Web', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+button,
+button:focus,
+button:active,
+input:focus,
+textarea:focus {
+	outline: none;
+}
+h2,
+div,
+form,
+select {
+  	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Form */
+
+.formWrapper {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form {
+  margin: 40px auto;
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  border-radius: 4px;
+  max-width: 600px;
+}
+.form h2 {
+  text-align: center;
+}
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-color: #a0b3b0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.form__inputWrapp {
+  position:relative;
+  margin-bottom:40px;
+  width: 100%;
+}
+.req {
+  color: #1ab188;
+  margin: 2px;
+}
+.doubleInput {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.doubleInput .form__inputWrapp:first-child {
+  margin-right: 5%;
+}
+.form__inputWrapp input:focus {
+  border: 1px solid #1ab188;
+  box-shadow: 0 3px 10px 4px rgba(19, 35, 47, 0.5);
+}
+.form__inputWrapp input, textarea, select {
+  background: none;
+  border: 1px solid #a0b3b0;
+  color: #fff;
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+}
+.form__inputWrapp label {
+  position:absolute;
+  transform:translateY(3px);
+  left:13px;
+  color:rgba(255,255,255, 0.5);
+  transition: 0.2s;
+  /* -webkit-backface-visibility: hidden; */
+  pointer-events: none;
+  font-size:22px;
+}
+.form__inputWrapp option {
+  background:rgba(19, 35, 47, 0.9);
+  color:rgba(255,255,255, 0.5);
+}
+.form__inputWrapp select {
+  background: transparent;
+  cursor: pointer;
+}
+.bday input {
+  color: transparent;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+.bday input::placeholder {
+  pointer-events: none;
+}
+.gender {
+  color: rgba(255,255,255, 0.5);
+  border-color: rgba(255,255,255, 0.5);
+  display: flex;
+  flex-direction: row;
+  /* height: 100%; */
+  width: 100%;
+  justify-content: space-around;
+  transform: translateY(-13px);
+}
+.gender__item {
+  display: flex;
+  /* width: 50%; */
+  /* height: 100%; */
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 3px 10px;
+}
+.gender__item label {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.gender__item input {
+  cursor: pointer;
+  margin: 2px 10px;
+}
+label.active {
+  transform:translateY(45px);
+  left:2px;
+  font-size:14px;
+  color: #fff;
+}
+legend.active {
+  color: #fff;
+}
+.active .req {
+  opacity: 0;
+}
+.notes {
+  color: rgba(255,255,255, 0.5);
+  border-color: rgba(255,255,255, 0.5);
+  padding: 1px;
+}
+.notes textarea {
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #999;
+  height: inherit;
+  width: inherit;
+  resize: none;
+}
+.btn {
+  margin-top: 20px;
+  background: #1ab188;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-weight: 900;
+  width: 100%;
+  box-shadow:0 3px 10px 4px rgba(19, 35, 47, 0.5);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.btn:active {
+  box-shadow:0 1px 5px 2px rgba(19, 35, 47, 0.5);
+  transform: translateY(2px);
+}
+.btn:hover  {
+  background: #14916f;
+}
+.tooltip {
+  position: absolute;
+  padding: 3px 10px;
+  background: rgb(45, 54, 61);
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+  bottom: -25px;
+  border: 1px solid #494e53;
+  z-index: 3;
+  color: #fff;
+}
+.gender .tooltip {
+  bottom: -11px;
+}
+.invalid {
+  border: 1px solid rgba(221, 69, 69, 0.644) !important; 
+  outline: rgba(221, 69, 69, 0.644) solid 1px;
+  outline-offset: -1px;
+}
+.modalWindow {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.9rem;
+  background: rgba(19, 35, 47, 0.95);
+  padding: 40px;
+  box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.9);
+  border-radius: 4px;
+  transition: 0.5s;
+}

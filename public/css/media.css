@@ -1,0 +1,25 @@
+@media screen and (max-width: 600px) {
+  .container {
+    width: 320px;
+  }
+  .formWrapper {
+    display: block;
+    position: static;
+    transform: translate(0, 0)
+  }
+  .form {
+    width: 320px;
+    padding: 10px;;
+  }
+  .doubleInput {
+    flex-direction: column;
+  }
+  .gender {
+    transform: translateY(0);
+    margin-bottom: 40px;
+    width: auto;
+  }
+  .notes {
+    width: 96%;
+  }
+} 
